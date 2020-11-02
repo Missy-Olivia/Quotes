@@ -12,7 +12,7 @@
             <div *ngFor="let quote of sortQuotes let i= index" class="card" style="width: 24rem;"  >
               <div class="card-body">
                 <p class="card-text" id="param">{{quote.quote}}</p>          
-                <span class="card-subtitle mb-2">Posted <span id="date">on: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span>     
+                <span class="card-subtitle mb-2">Posted  on:<span id="date"> <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span>     
               </div>
             </div>
           </div>
