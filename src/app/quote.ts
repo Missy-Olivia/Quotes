@@ -1,4 +1,6 @@
 export class Quote {
-    id : number;
-    name : String;
+    showDets: boolean;
+    constructor(public id:number,public quote:string,public author:string, public datePosted: Date,public likes:number, public dislikes:number){
+        this.showDets=false;
+    }
 }
