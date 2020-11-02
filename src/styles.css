@@ -1,9 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import '~font-awesome/css/font-awesome.css';
-body{
-    background-image:  url('../src/assets/p3.jpg');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+body{    
+    background-image:  linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../src/assets/p1.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 }
