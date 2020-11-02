@@ -13,6 +13,10 @@ h1{
   span{
     font-family: 'Dancing Script', cursive;
   }
+  #author {
+    font-family: 'Dancing Script', cursive; 
+
+  }
   .overlay{
     background-color:rgba(0, 0, 0, 0.301);
     border-radius: 5px;

@@ -5,17 +5,18 @@
            </h1>
            <hr>
       <div class="row">
-        <div class="col-sm-3">
-        </div>
         <div class="col-sm-9">
           <div class="all-cards">
             <div *ngFor="let quote of sortQuotes let i= index" class="card" style="width: 24rem;"  >
               <div class="card-body">
-                <p class="card-text" id="param">{{quote.quote}}</p>          
+                <p class="card-text" id="param">{{quote.quote}}</p>  <p id="author" class="text-success"> - {{quote.author}} </p>    
                 <span class="card-subtitle mb-2">Posted  on:<span id="date"> <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span>     
               </div>
             </div>
           </div>
+        </div>
+        <div class="col-sm-3">
+            <app-quote-form (add)="addedQuote($event)"></app-quote-form>
         </div>
       </div>
     </div>

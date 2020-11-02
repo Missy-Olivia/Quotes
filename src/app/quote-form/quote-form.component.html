@@ -1,1 +1,26 @@
-<p>quote-form works!</p>
+<div class="container-fluid">
+    <h2 class="heading">Add Quote</h2>
+    <!-- <hr> -->
+    <form (ngSubmit)='addQuote() ;quoteForm.resetForm({})' #quoteForm='ngForm'>
+        <div class="form-group">
+          <label for="description">Quote</label>
+          <textarea class="form-control" id="quote" rows="2" required [(ngModel)]="quoted.quote" name="quote" #quote='ngModel'></textarea>
+          <div *ngIf="quote.invalid && quote.dirty" class="alert alert-danger">
+            <div *ngIf="quote.errors.required">
+                Quote can not be empty.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="name">Quote Author</label>
+          <input type="text" required class="form-control" id="author"[(ngModel)]="quoted.author" name="author" #author='ngModel'>
+          <div *ngIf="author.invalid && author.dirty" class="alert alert-danger">
+            <div *ngIf="author.errors.required">
+                Author Name is required.
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-sm btn-success">Add Quote</button>
+    </form>
+  </div>
+  
