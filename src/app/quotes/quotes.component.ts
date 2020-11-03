@@ -20,13 +20,13 @@ export class QuotesComponent implements OnInit {
       return <any>new Date(b.datePosted) - <any>new Date(a.datePosted);
     });
   }  
-  addedQuote(quote){
+  addedQuote(quote: Quote){
     let arraysize = this.quotes.length;
     quote.id = arraysize+1;
     quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote)
   }
-  quoteDelete(isRead, index){
+  quoteDelete(isRead: any, index: number){
     if (isRead) {
       let toDelete = confirm(`Are you sure you want to delete this Quote?`)
       if(toDelete){
@@ -36,12 +36,12 @@ export class QuotesComponent implements OnInit {
     }
   }
  
-  displayInfo(index){
+  displayInfo(index: string | number){
     this.quotes[index].showDets = !this.quotes[index].showDets;
   }
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 }
