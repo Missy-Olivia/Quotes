@@ -1,6 +1,6 @@
 h1{
-    font-family: 'Special Elite', cursive;
-    color: white;
+    font-family: 'Dancing Script', cursive; 
+    color: green;
     text-align: center;
     font-weight: bolder;
     padding-bottom: 2%;
@@ -38,7 +38,7 @@ h1{
     justify-content: space-around;
   }
   #quotes-button{
-    float: right;
+    float: left;
   }
   .card{
     margin-bottom: 2%;

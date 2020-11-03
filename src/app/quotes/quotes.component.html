@@ -1,7 +1,7 @@
 <div class="overlay">
     <div class="container-fluid">
         <h1 class="text-center">
-            Quote Hub
+            Quotes Hub
            </h1>
            <hr>
       <div class="row">
@@ -11,7 +11,7 @@
               <div class="card-body">
                 <p class="card-text" id="param">{{quote.quote}}</p>  <p id="author" class="text-success"> - {{quote.author}} </p>    
                 <app-quote-details *ngIf='quote.showDets' bind-quoty='quote' (isRead)='quoteDelete($event,i)'></app-quote-details>
-                <span class="card-subtitle mb-2">Posted  on:<span id="date"> <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span>  
+                <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.name}}</span><span id="date">on: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span>  
                 <h4 class="card-title" appHighlight > {{quote.maxlikes}}<button (click)='displayInfo(i)' class="btn btn-success btn-sm" id="quotes-button" >See More</button></h4>   
               </div>
             </div>
